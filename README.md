@@ -1,6 +1,6 @@
 # Python_ExamModelExercise
 
-Instruction:
+Instructions:
 
 Una empresa desea registrar las ventas realizadas de cada uno de sus 20 productos a lo largo del año. Los productos están identificados por un código numérico correlativo del 1 al 20.  
 

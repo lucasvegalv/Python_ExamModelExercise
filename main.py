@@ -11,12 +11,11 @@ def create_matrix(n, m):
   for i in range(n):
     matrix.append([])
     for j in range(m):
-      value =  random.randint(1, 100)
-      matrix[i].append(value)
+      matrix[i].append(0)
 
   return matrix
 
-# 2) Print the matrix
+# 2) Show Matrix
 def show_matrix(mat):
   for row in matrix:
     for value in row:
@@ -52,7 +51,7 @@ def sales_x_month():
   for i in range(ROWS):
     for j in range(COLS):
       soldItems = int(matrix[i][j] / prices[i])
-      print(f"The product #{i +1} was sold {soldItems} times in the month {j + 1} ")
+      print(f"The product #{i + 1} was sold {soldItems} times in the month {j + 1} ")
 
 # 5) Print the product with the biggest profit
 def max_profit():
@@ -65,7 +64,7 @@ def max_profit():
         max = matrix[i][j]
         posRow = i
         posCol = j
-  print(f"The product with the biggest profit was the product #{posRow + 1}, in the ({posRow +1}, {posCol + 1}) position, with a total of ${max}.")
+  print(f"The product with the biggest profit was the product #{posRow + 1}, in the {posCol + 1}º month, with a total of ${max}.")
 
 # 6) Profits per Quarter
 quarterProfits = []
@@ -89,8 +88,6 @@ def quarter_profits():
     quarterTo += 3
     quarter += 1
 
-  print(quarterProfits)
-
 # 7) Print the quarter with less profits
 def less_profit():
   min = quarterProfits[0]
@@ -108,13 +105,11 @@ for x in range(ROWS):
   value = int(random.randint(100, 500))
   prices.append(value)
 
-# Main Execution
-print(prices)
+# MAIN
 create_matrix(ROWS, COLS)
-#fill_matrix()
-
+fill_matrix()
 show_matrix(matrix)
-
+sales_x_month()
 max_profit()
 quarter_profits()
 less_profit()
